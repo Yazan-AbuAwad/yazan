@@ -66,4 +66,16 @@ const skillCards = document.querySelectorAll('.skill-card');
 
 
 });
+window.addEventListener("load", function () {
+  if (window.location.hash) {
+    // Use a slightly longer delay to handle mobile
+    setTimeout(function () {
+      // Scroll to top
+      window.scrollTo(0, 0);
+
+      // Remove hash
+      history.replaceState(null, document.title, window.location.pathname + window.location.search);
+    }, 50); // 50ms is safer for mobile
+  }
+});
 

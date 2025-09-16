@@ -59,9 +59,11 @@ const skillCards = document.querySelectorAll('.skill-card');
 // Remove hash from URL after scroll (to prevent staying on section after refresh)
     if (window.location.hash) {
       setTimeout(function() {
+        window.scrollTo(0, 0);
         history.replaceState(null, document.title, window.location.pathname + window.location.search);
       }, 10);
     }
 
 
 });
+

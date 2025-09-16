@@ -56,5 +56,12 @@ const skillCards = document.querySelectorAll('.skill-card');
 
   skillCards.forEach(card => observer.observe(card));
 
+// Remove hash from URL after scroll (to prevent staying on section after refresh)
+    if (window.location.hash) {
+      setTimeout(function() {
+        history.replaceState(null, document.title, window.location.pathname + window.location.search);
+      }, 10);
+    }
+
 
 });

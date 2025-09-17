@@ -1,1 +1,1 @@
-Just an HTML version of my CV
+Just a web version of my CV
